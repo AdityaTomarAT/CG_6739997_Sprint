@@ -1,0 +1,78 @@
+pipeline {
+
+```
+agent any
+
+stages {
+
+    stage('Install Dependencies') {
+
+        steps {
+
+            sh 'npm install'
+
+        }
+
+    }
+
+    stage('Install Playwright Browsers') {
+
+        steps {
+
+            sh 'npx playwright install --with-deps'
+
+        }
+
+    }
+
+    stage('Run Playwright Tests') {
+
+        steps {
+
+            sh 'npx playwright test --debug'
+
+        }
+
+    }
+
+    stage('Generate Allure Report') {
+
+        steps {
+
+            sh 'npx allure generate allure-results --clean'
+        }
+
+    }
+
+}
+
+post {
+
+    always {
+
+        archiveArtifacts(
+            artifacts: 'screenshots/**/*',
+            allowEmptyArchive: true
+        )
+
+        archiveArtifacts(
+            artifacts: 'playwright-report/**/*',
+            allowEmptyArchive: true
+        )
+
+        archiveArtifacts(
+            artifacts: 'allure-report/**/*',
+            allowEmptyArchive: true
+        )
+
+        archiveArtifacts(
+            artifacts: 'test-results/**/*',
+            allowEmptyArchive: true
+        )
+
+    }
+
+}
+```
+
+}
