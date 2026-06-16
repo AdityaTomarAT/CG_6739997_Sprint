@@ -1,0 +1,6 @@
+Current URL: https://parabank.parasoft.com/parabank/transfer.htm
+Available Accounts: [ '55968', '56745', '56856' ]
+From Account: 55968
+To Account: 56745
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/UI/Transfer-Funds-Success.png
+Transfer Message: Transfer Complete!

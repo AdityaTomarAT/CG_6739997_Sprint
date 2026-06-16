@@ -1,0 +1,17 @@
+{
+    "baseUrl": "https://parabank.parasoft.com/parabank/index.htm",
+    "apiBaseUrl": "https://parabank.parasoft.com/parabank/services_proxy/bank",
+    "API_TIMEOUT": "30000",
+    "UI_TIMEOUT": "30000",
+    "firstName": "eddy",
+    "lastName": "eddy",
+    "address": "test",
+    "city": "test",
+    "state": "test",
+    "zipCode": "test",
+    "phone": "test",
+    "ssn": "test",
+    "username": "test2",
+    "password": "test2",
+    "amount": "100"
+}

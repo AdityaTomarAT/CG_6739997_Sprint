@@ -1,0 +1,4 @@
+Available Accounts: []
+From Account: 55968
+To Account: 56745
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/Negative/Negative-Transfer-Amount.png

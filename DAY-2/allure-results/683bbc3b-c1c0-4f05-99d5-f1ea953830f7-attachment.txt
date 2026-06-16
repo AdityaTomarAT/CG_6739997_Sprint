@@ -1,0 +1,2 @@
+API Response Saved: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/api/TC-API-09-55968.xml
+Balance: -184.5

@@ -1,0 +1,6 @@
+Target Balance Before: 0
+Available Accounts: []
+From Account: 55968
+To Account: 56745
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/End-to-End/Target-Account-Balance-Validation.png
+Target Balance After: 0

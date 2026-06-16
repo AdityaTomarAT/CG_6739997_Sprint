@@ -1,0 +1,2 @@
+API Response: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><account><id>55968</id><customerId>35078</customerId><type>CHECKING</type><balance>-184.50</balance></account>
+API Response Saved: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/api/TC-API-03-55968.xml

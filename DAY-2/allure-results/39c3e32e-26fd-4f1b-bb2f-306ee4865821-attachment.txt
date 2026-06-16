@@ -1,0 +1,9 @@
+Accounts Available: [ '55968', '56745', '56856', '58965' ]
+Account 55968: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><account><id>55968</id><customerId>35078</customerId><type>CHECKING</type><balance>-184.50</balance></account>
+Saved: Account-55968.xml
+Account 56745: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><account><id>56745</id><customerId>35078</customerId><type>SAVINGS</type><balance>500.00</balance></account>
+Saved: Account-56745.xml
+Account 56856: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><account><id>56856</id><customerId>35078</customerId><type>CHECKING</type><balance>100.00</balance></account>
+Saved: Account-56856.xml
+Account 58965: <?xml version="1.0" encoding="UTF-8" standalone="yes"?><account><id>58965</id><customerId>35078</customerId><type>SAVINGS</type><balance>100.00</balance></account>
+Saved: Account-58965.xml

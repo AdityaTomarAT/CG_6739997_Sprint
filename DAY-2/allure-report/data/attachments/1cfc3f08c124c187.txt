@@ -1,0 +1,7 @@
+Account Number: 55968
+Balance Before: 0
+Available Accounts: []
+From Account: 55968
+To Account: 56745
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/End-to-End/Balance-After-Transfer.png
+Balance After: 0

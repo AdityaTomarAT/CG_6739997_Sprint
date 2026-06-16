@@ -1,0 +1,16 @@
+Account Creation Message: Congratulations, your account is now open.
+
+    <h1 class="title">Account Opened!</h1>
+    <p>Congratulations, your account is now open.</p>
+    <p><b>Your new account number:</b> <a id="newAccountId" href="activity.htm?id=56856">56856</a></p>
+  
+====================
+
+    <h1 class="title">Account Opened!</h1>
+    <p>Congratulations, your account is now open.</p>
+    <p><b>Your new account number:</b> <a id="newAccountId" href="activity.htm?id=56856">56856</a></p>
+  
+====================
+Account ID: 56856
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/UI/Checking-Account-Created.png
+Checking Account ID: 56856
