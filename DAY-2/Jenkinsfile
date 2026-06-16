@@ -9,7 +9,11 @@ stages {
 
         steps {
 
-            sh 'npm install'
+            dir('DAY-2') {
+
+                sh 'npm install'
+
+            }
 
         }
 
@@ -19,7 +23,11 @@ stages {
 
         steps {
 
-            sh 'npx playwright install --with-deps'
+            dir('DAY-2') {
+
+                sh 'npx playwright install --with-deps'
+
+            }
 
         }
 
@@ -29,7 +37,11 @@ stages {
 
         steps {
 
-            sh 'npx playwright test --debug'
+            dir('DAY-2') {
+
+                sh 'npx playwright test --debug'
+
+            }
 
         }
 
@@ -39,7 +51,12 @@ stages {
 
         steps {
 
-            sh 'npx allure generate allure-results --clean'
+            dir('DAY-2') {
+
+                sh 'npx allure generate allure-results --clean'
+
+            }
+
         }
 
     }
@@ -51,22 +68,22 @@ post {
     always {
 
         archiveArtifacts(
-            artifacts: 'screenshots/**/*',
+            artifacts: 'DAY-2/screenshots/**/*',
             allowEmptyArchive: true
         )
 
         archiveArtifacts(
-            artifacts: 'playwright-report/**/*',
+            artifacts: 'DAY-2/test-results/**/*',
             allowEmptyArchive: true
         )
 
         archiveArtifacts(
-            artifacts: 'allure-report/**/*',
+            artifacts: 'DAY-2/playwright-report/**/*',
             allowEmptyArchive: true
         )
 
         archiveArtifacts(
-            artifacts: 'test-results/**/*',
+            artifacts: 'DAY-2/allure-report/**/*',
             allowEmptyArchive: true
         )
 
