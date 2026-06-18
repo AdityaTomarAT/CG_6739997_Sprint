@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { test, expect } from '@playwright/test';
+import { test, expect, request } from '@playwright/test';
 
 import { LoginPage } from '../../pages/LoginPage';
 import { RegisterPage } from '../../pages/RegisterPage';
@@ -21,7 +21,7 @@ test.describe(
 
         test.skip(
             'TC-E2E-01 Register Login Create Savings Account',
-            async ({ page }) => {
+            async ({ page, request }) => {
 
                 const loginPage =
                     new LoginPage(page);
@@ -44,7 +44,7 @@ test.describe(
                 // Register User
                 await loginPage.navigate();
 
-                await loginPage.goToRegisterPage();
+                await loginPage.navigate();
 
                 await registerPage.registerUser(
                     'Aditya',
@@ -66,38 +66,86 @@ test.describe(
                     username
                 );
 
-                // Login
-                // await loginPage.navigate();
-
-                // await loginPage.login(
-                //     username,
-                //     password
-                // );
-
-                // await loginPage
-                //     .verifyLoginSuccess();
-
-                // console.log(
-                //     'Login Successful'
-                // );
-
-                // Create Savings Account
                 await homePage
                     .goToOpenAccount();
 
                 await openAccountPage
                     .createSavingsAccount();
 
-                await openAccountPage
-                    .verifyAccountCreated();
+                const SavingsaccountId =
+                    await openAccountPage
+                        .verifyAccountCreated();
+
+                const savingResponse =
+                    await request.get(
+                        `https://parabank.parasoft.com/parabank/services/bank/accounts/${SavingsaccountId}`
+                    );
+
+                expect(
+                    savingResponse.status()
+                ).toBe(200);
+
+                const savingsResponseBody =
+                    await savingResponse.text();
+
+                expect(
+                    savingsResponseBody         
+                ).toContain(
+                    `<id>${SavingsaccountId}</id>`
+                );
+
+                expect(
+                    savingsResponseBody
+                ).toContain(
+                    '<type>SAVINGS</type>'
+                );
+
+                expect(
+                    savingsResponseBody
+                ).toContain(
+                    '<balance>'
+                );
+
+
 
                 await homePage
                     .goToOpenAccount();
 
                 await openAccountPage.createCheckingAccount();
 
-                await openAccountPage
-                    .verifyAccountCreated();
+                const CheckingaccountId =
+                    await openAccountPage
+                        .verifyAccountCreated();
+
+                const checkingResponse =
+                    await request.get(
+                        `https://parabank.parasoft.com/parabank/services/bank/accounts/${CheckingaccountId}`
+                    );
+
+                expect(
+                    checkingResponse.status()
+                ).toBe(200);
+
+                const checkingResponseBody =
+                    await checkingResponse.text();
+
+                expect(
+                    checkingResponseBody
+                ).toContain(
+                    `<id>${CheckingaccountId}</id>`
+                );
+
+                expect(
+                    checkingResponseBody
+                ).toContain(
+                    '<type>SAVINGS</type>'
+                );
+
+                expect(
+                    checkingResponseBody
+                ).toContain(
+                    '<balance>'
+                );
 
                 await takeScreenshot(page, 'End-to-End', 'Register-Login-Create-Account');
 

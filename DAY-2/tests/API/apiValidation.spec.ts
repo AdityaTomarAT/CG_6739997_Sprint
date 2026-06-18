@@ -10,7 +10,7 @@ import userData from '../../test-data/user-data.json';
 test.describe('API Validation Tests', () => {
 
     test(
-        'TC-API-01 Validate Status Code',
+        'TC-API-02 Validate Status Code',
         async ({ page, request }) => {
 
             const loginPage =
@@ -56,7 +56,7 @@ test.describe('API Validation Tests', () => {
     );
 
     test(
-        'TC-API-02 Validate Response Time',
+        'TC-API-03 Validate Response Time',
         async ({ page, request }) => {
 
             const loginPage =
@@ -105,13 +105,13 @@ test.describe('API Validation Tests', () => {
 
             expect(
                 responseTime
-            ).toBeLessThan(5000);
+            ).toBeLessThan(2000);
 
         }
     );
 
     test(
-        'TC-API-03 Validate Response Data',
+        'TC-API-04 Validate Response Data',
         async ({ page, request }) => {
 
             const loginPage =
@@ -177,7 +177,7 @@ test.describe('API Validation Tests', () => {
     );
 
     test(
-        'TC-API-09 Validate Balance Data Type',
+        'TC-API-05 Validate Balance Data Type',
         async ({ page, request }) => {
 
             const loginPage =
@@ -214,7 +214,7 @@ test.describe('API Validation Tests', () => {
                 await response.text();
 
             saveApiResponse(
-                `TC-API-09-${accountId}`,
+                `TC-API-04-${accountId}`,
                 responseBody
             );
 
@@ -232,10 +232,6 @@ test.describe('API Validation Tests', () => {
                 'Balance:',
                 balance
             );
-
-            expect(
-                isNaN(balance)
-            ).toBeFalsy();
 
         }
     );

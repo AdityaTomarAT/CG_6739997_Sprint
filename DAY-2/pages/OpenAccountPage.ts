@@ -29,16 +29,21 @@ export class OpenAccountPage {
                 'Congratulations'
             );
 
+        const accountId =
+            await this.page
+                .locator('#newAccountId')
+                .textContent();
+
         console.log(
-            'Account Creation Message:',
-            await message.textContent()
+            'Created Account ID:',
+            accountId
         );
+
+        return accountId?.trim();
     }
 
     // returns the new account id shown after account creation
     async getCreatedAccountId() {
-
-
 
         console.log(
             '===================='
@@ -50,7 +55,7 @@ export class OpenAccountPage {
                 .innerHTML()
         );
         await this.page.waitForLoadState('networkidle');
-        await this.page.waitForTimeout(5000);
+        await this.page.waitForTimeout(3000);
 
         console.log(
             '===================='

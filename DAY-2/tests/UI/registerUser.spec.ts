@@ -7,7 +7,7 @@ import { takeScreenshot } from '../../utils/screenshot_Helper';
 const screenshotDir = 'test-results/screenshots/ui';
 
 
-test('Register New User', async ({ page }) => {
+test('TC-REG-UI-01 Register New User', async ({ page }) => {
 
     const registerPage = new RegisterPage(page);
 

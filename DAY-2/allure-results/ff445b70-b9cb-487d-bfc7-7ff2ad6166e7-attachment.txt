@@ -1,0 +1,6 @@
+Target Balance Before: 100
+Available Accounts: [ '26220', '26331', '26442' ]
+From Account: 26220
+To Account: 26331
+Screenshot saved at: /Users/adityatomar/Desktop/SPRINT/DAY-2/screenshots/End-to-End/Target-Account-Balance-Validation.png
+Target Balance After: 200

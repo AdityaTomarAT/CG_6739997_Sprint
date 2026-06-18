@@ -19,7 +19,7 @@ test.describe(
     () => {
 
         test(
-            'TC-BAL-02 Validate Target Account Balance',
+            'TC-E2E-03 Validate Target Account Balance',
             async ({ page }) => {
 
                 const loginPage =
@@ -96,18 +96,18 @@ test.describe(
                             .replace(',', '')
                     );
                 await takeScreenshot(page, 'End-to-End', 'Target-Account-Balance-Validation');
-                
+
 
                 console.log(
                     'Target Balance After:',
                     balanceAfter
                 );
 
-                // expect(
-                //     balanceAfter -
-                //     balanceBefore
-                // ).not.toBe("");
+                const transferAmount = 100;
 
+                expect(
+                    balanceAfter - balanceBefore
+                ).toBeCloseTo(100, 2);
             }
         );
 

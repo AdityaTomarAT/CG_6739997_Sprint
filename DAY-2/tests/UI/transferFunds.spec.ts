@@ -22,7 +22,7 @@ if (!fs.existsSync(screenshotDir)) {
 test.describe('Transfer Funds Tests', () => {
 
     test(
-        'TC-TF-01 Transfer Funds Between Accounts',
+        'TC-TF-UI-01 Transfer Funds Between Accounts',
         async ({ page }) => {
 
             const loginPage =

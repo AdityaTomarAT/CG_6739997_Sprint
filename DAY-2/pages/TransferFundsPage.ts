@@ -15,9 +15,6 @@ export class TransferFundsPage {
             .locator('#amount')
             .fill(amount);
 
-        // Wait for dropdowns to load
-        // await this.page.waitForTimeout(2000);
-
         // Debug available accounts
         const availableAccounts =
             await this.page
@@ -36,17 +33,17 @@ export class TransferFundsPage {
                 .nth(0)
                 .getAttribute('value');
 
+        console.log(
+            'From Account:',
+            fromAccount
+        );
+
         // Get second account
         const toAccount =
             await this.page
                 .locator('#toAccountId option')
                 .nth(1)
                 .getAttribute('value');
-
-        console.log(
-            'From Account:',
-            fromAccount
-        );
 
         console.log(
             'To Account:',

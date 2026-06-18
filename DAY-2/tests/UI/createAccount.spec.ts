@@ -15,7 +15,7 @@ if (!fs.existsSync(screenshotDir)) {
 
 test.describe('Account Creation Tests', () => {
 
-    test('TC-AC-01 Create Savings Account', async ({ page }) => {
+    test('TC-AC-UI-01 Create Savings Account', async ({ page }) => {
 
         const loginPage = new LoginPage(page);
         const homePage = new HomePage(page);
@@ -69,7 +69,7 @@ test.describe('Account Creation Tests', () => {
             .not.toBe('');
     });
 
-    test('TC-AC-02 Create Checking Account', async ({ page }) => {
+    test('TC-AC-UI-02 Create Checking Account', async ({ page }) => {
 
         const loginPage = new LoginPage(page);
         const homePage = new HomePage(page);
